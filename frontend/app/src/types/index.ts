@@ -35,3 +35,7 @@ export function isPaidOrder(order: Order): boolean {
 export type LikeStyle = {
   isActive: boolean;
 };
+
+export type ProductTableProps = {
+  products: Product[];
+};
