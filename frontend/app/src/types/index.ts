@@ -31,3 +31,7 @@ export type CreateProductDTO = Omit<Product, "id">;
 export function isPaidOrder(order: Order): boolean {
   return order.status === "paid";
 }
+
+export type LikeStyle = {
+  isActive: boolean;
+};
