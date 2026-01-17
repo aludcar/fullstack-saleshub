@@ -28,6 +28,8 @@ export type ApiResponse<T> = {
 };
 
 export type CreateProductDTO = Omit<Product, "id">;
+export type CreateCustomerForm = Omit<Customer, "id">;
+
 export function isPaidOrder(order: Order): boolean {
   return order.status === "paid";
 }
@@ -38,4 +40,8 @@ export type LikeStyle = {
 
 export type ProductTableProps = {
   products: Product[];
+};
+
+export type CustomerFormProps = {
+  onSubmit: (data: CreateCustomerForm) => void;
 };
